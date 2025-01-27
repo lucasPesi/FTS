@@ -1,3 +1,16 @@
+Het kan zijn dat de migrations op een gegeven moment een error krijgen, als dit het geval is doe dan het volgende en check tussen elke migrate de status 
+Php artisan migrate
+Dan krijg je bij    2024_12_10_181920_create_boekingen_table, een error doe het volgende:
+Php artisan migrate--path=database/migrations/2024_12_14_170531_create_rollen_table.php 
+en
+php artisan migrate --path=database/migrations/2024_12_14_134454_add_what_role_to_users_table.php      
+dan krijg je een error dat de table al bestaat en bij php artisan migrate:status is status nog pending, echter is het wel orrect doorgevoerd naar de database.
+php artisan migrate --path=database/migrations/2024_12_19_135218_create_festival_table.php
+dan
+php artisan migrate --path=database/migrations/2025_01_02_203829_create_vipticket_table.php
+php artisan migrate --path=database/migrations/2024_12_19_122155_create_bussen_table.php
+php artisan migrate --path=database/migrations/2024_12_19_115237_create_busritten_table.php
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
